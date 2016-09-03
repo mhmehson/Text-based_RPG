@@ -41,7 +41,7 @@ public class Monster extends GameCharacter
      @Override
      public String toString()
      {
-          return String.format("%sXP: %d%n", super.toString(), xP);     
+          return String.format("%s%nXP: %d%n", super.toString(), xP);     
      }
      
 }

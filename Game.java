@@ -46,25 +46,25 @@ public class Game
         // castle object instantiated
         castle1 = new Castle();
           
-        // get current room by calling getRoom method from Castle
+        // get initial room by calling getRoom0() method from Castle
         currentRoom = castle1.getRoom0();
     
         // while loop control variable is true
 		while(continuePlaying)
 		{
-			System.out.println(currentRoom); // print current room's description and available exits
-			
+			// print current room's description and available exits
+			System.out.println(currentRoom); 
 			System.out.println(currentRoom.getExits());
-			System.out.println();
+			System.out.println(); // empty line
 		    
-		    /* if validSelection is true than room is updated and a monster may be generated, 
+		    /* if player picked valid direction, than room is updated and a monster may be generated, 
 		     * otherwise user promted to re-enter direction choice. 
 		     */
 			if (validSelection)
 			{
 			    
-			    currentRoom.monsterGenerator(); // call method monsterGenerator to perhaps generate a monster
-			    // call method isMnsterGenerated to find if mosnter was genreated and store result in boolean generateMonster
+			    currentRoom.monsterGenerator(); // call method monsterGenerator(); monster may or not be generated
+			    // call method isMonsterGenerated() to find out if monster was generated and store result in boolean generateMonster
 			    boolean generateMonster = currentRoom.isMonsterGenerated(); 
 			
          			if(generateMonster == true)
